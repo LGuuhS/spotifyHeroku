@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-areas: "nav nav nav nav nav nav nav nav"
+                         "header header header header header header header header"
+                         ". logo empresas comunidade links . redes ."
+                         "footer footer footer footer footer footer footer footer";
+    grid-template-rows: 11vh 89vh 50vh 20vh;
+    grid-template-columns: 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
+    font-family: Circular, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+nav{
+    grid-area: nav;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 80px;
+    width: 100vw;
+}
+
+nav :nth-child(1) img{
+    height: 40px;
+}
+
+nav :nth-child(1){
+    padding: 0 11.5%;
+}
+
+nav :nth-child(2){
+    padding: 0 12.5%;
+}
+
+nav :nth-child(2) a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 17px;
+    font-size: 15px;
+}
+
+header{
+    grid-area: header;
+    background-image: url(images/bg1.png)
+}
