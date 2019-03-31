@@ -1,14 +1,29 @@
+@font-face {
+    font-family: circular-book;
+    src: url(fonts/circular-book.woff2);
+}
+
+@font-face {
+    font-family: circular-bold;
+    src: url(fonts/circular-bold.woff2);
+}
+
+ @font-face {
+    font-family: circular-black;
+    src: url(fonts/circular-black.woff2);
+ }
+
 body{
     margin: 0;
     display: grid;
     grid-template-areas: "nav nav nav nav nav nav nav nav"
                          "header header header header header header header header"
-                         ". logo empresas comunidade links . redes ."
+                         "logo logo empresas comunidade links redes redes redes"
                          "footer footer footer footer footer footer footer footer";
     grid-template-rows: 11vh 89vh 50vh 20vh;
     grid-template-columns: 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
-    font-family: Circular, Helvetica, Arial, sans-serif;
     overflow-x: hidden;
+    font-family: circular-book, Helvetica, sans-serif;
 }
 
 nav{
@@ -22,26 +37,76 @@ nav{
     width: 100vw;
 }
 
-nav :nth-child(1) img{
-    height: 40px;
-}
-
-nav :nth-child(1){
+nav :first-child{
+    display: flex;
     padding: 0 11.5%;
 }
 
+nav :first-child img{
+    height: 40px;
+}
+
 nav :nth-child(2){
+    display: flex;
     padding: 0 12.5%;
 }
 
 nav :nth-child(2) a{
     color: #ffffff;
     text-decoration: none;
-    padding: 0 17px;
-    font-size: 15px;
+    padding: 0 14px;
+    font-size: 16px;
+    font-family: circular-book, helvetica, sans-serif;
+    font-weight: 700;
+}
+
+#aColorNav{
+    color: #D9DADC;
 }
 
 header{
     grid-area: header;
-    background-image: url(images/bg1.png)
+    background-image: url(images/bg1.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header :first-child h1{
+    color: #ffffff;
+    font-size: 80px;
+    letter-spacing: -0.04em;
+    font-family: circular-bold, helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+header :first-child h4{
+    color: #ffffff;
+    font-size: 18px;
+    font-family: circular-book, helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+}
+
+header :first-child button{
+    background-color: #1DB954;;
+    color: #ffffff;
+    padding: 16px 48px 18px;
+    border-radius: 500px;
+    border: none;
+    font-size: 14px;
+    font-family: circular-bold, helvetica, sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+    line-height: 1;
+    margin-top: 30px;
+}
+
+header :first-child button:hover{
+    background-color: #1ED760;
+    transition: 0.5s;
 }
