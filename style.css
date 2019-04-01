@@ -20,7 +20,7 @@ body{
                          "header header header header header header header header"
                          "logo logo empresas comunidade links redes redes redes"
                          "footer footer footer footer footer footer footer footer";
-    grid-template-rows: 11vh 89vh 50vh 20vh;
+    grid-template-rows: 11vh 100vh 50vh 20vh;
     grid-template-columns: 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw 12.5vw;
     overflow-x: hidden;
     font-family: circular-book, Helvetica, sans-serif;
@@ -48,20 +48,33 @@ nav :first-child img{
 
 nav :nth-child(2){
     display: flex;
-    padding: 0 12.5%;
+    padding: 0 12.4%;
 }
 
 nav :nth-child(2) a{
     color: #ffffff;
     text-decoration: none;
-    padding: 0 14px;
+    padding: 0 17px;
     font-size: 16px;
     font-family: circular-book, helvetica, sans-serif;
     font-weight: 700;
 }
 
+nav :nth-child(2) a:hover{
+    color:#1DB954;
+}
+
 #aColorNav{
     color: #D9DADC;
+}
+
+#aColorNav:hover{
+    color: #1DB954;
+}
+
+#pip:hover{
+    color: #ffffff;
+    cursor: default;
 }
 
 header{
@@ -109,4 +122,69 @@ header :first-child button{
 header :first-child button:hover{
     background-color: #1ED760;
     transition: 0.5s;
+}
+
+logo {
+    grid-area: logo;
+    background-color: black;
+}
+
+logo img{
+    height: 40px;
+}
+
+empresas {
+    grid-area: empresas;
+    background-color: black;
+}
+
+empresas a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+comunidade {
+    grid-area: comunidade;
+    background-color: black;
+}
+
+comunidade a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+links {
+    grid-area: links;
+    background-color: black;
+}
+
+links a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+redes {
+    grid-area: redes;
+    background-color: black;
+}
+
+redes img{
+    height: 24px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: #919496;
+}
+
+footer a{
+    color: #919496;
+    text-decoration: none;
+}
+
+h3{
+    color: #919496;
 }
